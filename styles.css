@@ -1,0 +1,253 @@
+/* Basic reset and global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: black; /* Fallback color */
+    color: white; /* Default text color */
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Ensure it's behind content */
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Enable wrapping on smaller screens */
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.left-section,
+.right-section {
+    flex: 1;
+    position: relative; /* Ensure relative positioning for overlay */
+    min-width: 300px; /* Ensure a minimum width for better layout */
+    border-radius: 5px;    
+}
+
+.right-section {
+    background-color: #b0a89f;
+    padding: 10px 7px 0px 10px;
+    border-radius: 5px;
+}
+
+.centered-box {
+    width: 150px;
+    height: 100px;
+    background-color: ; /* Black background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+}
+
+.centered-box img {
+    width: auto;
+    height: 100px;
+}
+
+.section-with-taupe-bg {
+    background-color: #b0a89f; /* Taupe color */
+    padding: 20px;
+    margin-top: 20px; /* Adjust margin */
+}
+
+.section-with-taupe-bg p {
+    color: white; /* White text */
+}
+
+.ready-message {
+    font-size: 1.2em;
+}
+
+.expiration-message {
+    font-size: 0.8em;
+}
+
+.product-sample-message {
+    font-size: 0.9em;
+    margin-top: 20px;
+}
+
+.download-button {
+    display: inline-block;
+    background-color: #007bff; /* Blue button */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer; /* Ensure it looks clickable */
+}
+
+.download-info {
+    font-size: 0.8em;
+    margin-top: 10px;
+}
+
+.files-to-download {
+    margin-bottom: 20px;
+}
+
+.files-to-download h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.item-sizes {
+    font-size: 0.9em;
+}
+
+.blue-button {
+    display: inline-block;
+    background-color: #0056b3; /* Darker blue for contrast */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer; /* Ensure it looks clickable */
+}
+
+.download-options {
+    margin-top: 20px;
+}
+
+.download-button {
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0; /* Light gray */
+    color: #333;
+    text-decoration: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.download-button img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.download-button span {
+    flex: 1;
+}
+
+.back-button {
+    display: inline-block;
+    background-color: #333; /* Dark gray */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-top: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+/* Popup styles */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(176, 168, 159, 0.8); /* Taupe color with opacity */
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: #b0a89f;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    width: 80%; /* Adjusted for smaller screens */
+    max-width: 400px; /* Max width for larger screens */
+    max-height: 80%;
+    overflow: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+}
+
+.popup-logo {
+    width: 30px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.popup-content h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.popup-content p {
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.popup-form {
+    margin-top: 20px;
+}
+
+.popup-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.close-button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.close-button:hover {
+    background-color: #555;
+}
+
+.popup-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+
+.popup-input:focus {
+    outline: none;
+    border-color: #007bff; /* Blue focus border */
+}
+
+.popup-checkbox {
+    margin-top: 10px;
+}
+
+.popup-checkbox label {
+    margin-right: 10px;
+}

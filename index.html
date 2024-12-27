@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3.11.0/dist/email.min.js"></script>
+</head>
+<body>
+    <div class="logo-on-background">
+        <img src="wlp.png" alt="Logo">
+    </div>
+    <video autoplay muted loop class="video-background">
+        <source src="https://cdn.glitch.global/4138a621-3bb5-410e-9e61-32c554b900ee/bg.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="container">
+        <!-- Left section -->
+        <div class="left-section">
+            <div class="content-overlay">
+                <div class="centered-box">
+                    <img src="download-icon.png" alt="Download Icon">
+                </div>
+                <div class="section-with-taupe-bg">
+                    <p class="ready-message">Ready When You Are</p>
+                    <p class="expiration-message">Transfer expires in 7 days</p>
+                    <br>
+                    <p class="product-sample-message">This is the product sample and specification we want, kindly view.</p>
+                    <a href="#" class="download-button">
+                        <span>4 files</span><br>
+                        <span>8.9MB</span><br>
+                        <span>Download</span><img src="download-icon.png" alt="Download Icon">
+                    </a>
+                </div>
+            </div>
+            <span style="text-align: center; color: #b0a89f;"><h3>Home | Products | Company | Sign up | Login </h3></span>
+        </div>
+        <!-- Right section -->
+        <div class="right-section">
+            <div class="files-to-download">
+                <h2>Files Ready To Download</h2>
+                <p class="item-sizes">All sizes of items</p>
+                <a href="#" class="blue-button">Download All</a>
+                <div class="download-options">
+                    <a href="#" class="download-button" onclick="openPopup('Purchase order')">
+                        <img src="pi-order.png" alt="Purchase Order Icon">
+                        <span>PURCHASE ORDER</span>
+                        <span>.pdf</span>
+                        <img src="download-icon.png" alt="Download Icon">
+                    </a>
+                    <a href="#" class="download-button" onclick="openPopup('Order List File')">
+                        <img src="pi-order.png" alt="Order List File Icon">
+                        <span>Order List File</span>
+                        <span>.pdf</span>
+                        <img src="download-icon.png" alt="Download Icon">
+                    </a>
+                    <a href="#" class="download-button" onclick="openPopup('SampleVideo')">
+                        <img src="pi-order1.png" alt="PI Order Icon">
+                        <span>SampleVideo</span>
+                        <span>.pdf</span>
+                        <img src="download-icon.png" alt="Download Icon">
+                    </a>
+                    <a href="#" class="download-button" onclick="openPopup('Clearance Invoice')">
+                        <img src="pi-order.png" alt="Clearance Invoice Icon">
+                        <span>Clearance Invoice</span>
+                        <span>.pdf</span>
+                        <img src="download-icon.png" alt="Download Icon">
+                    </a>
+                </div>
+            </div>
+            <a href="#" class="back-button">Back</a>
+        </div>
+    </div>
+    <!-- HTML structure for popup -->
+<div class="popup-overlay" id="popupOverlay">
+    <div class="popup-content">
+        <img src="wlp.png" alt="WLP Logo" class="popup-logo">
+        <h2 id="popupTitle">Popup Title</h2>
+        <p id="popupContent">Get more out of WeTransfer Pro, get pro.</p>
+        <div class="form-container">
+            <form action="#" class="popup-form">
+                <input type="email" id="email" name="email" placeholder="Enter your email">
+                <br>
+                <input type="password" id="password" name="password" placeholder="Enter your password">
+            </form>
+        </div>
+        <label>
+            <input type="checkbox" id="rememberMe"> Remember me
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" id="forgetPassword"> Forget password
+        </label>
+        <br>
+        <!-- Network Error message -->
+        <p id="networkError" style="display: none; color: red;">Network Error. try again later...</p>
+        <button id="downloadButton" class="blue-button">Download</button>
+        <br>
+        <button class="close-button" onclick="closePopup()">Close</button>
+    </div>
+</div>
+    <script src="script.js"></script>
+    
+</body>
+</html>
